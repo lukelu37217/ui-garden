@@ -8,7 +8,7 @@ const meta: Meta<typeof Card> = {
     image: { control: 'text' },
     title: { control: 'text' },
     description: { control: 'text' },
-    buttonText: { control: 'text' }
+    buttonText: { control: 'text' },
   },
 };
 export default meta;

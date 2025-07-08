@@ -9,7 +9,7 @@ const StyledImg = styled.img<{
 }>`
   width: ${props => props.width || 'auto'};
   height: ${props => props.height || 'auto'};
-  border-radius: ${props => props.rounded ? '50%' : '0'};
+  border-radius: ${props => (props.rounded ? '50%' : '0')};
   object-fit: cover;
 `;
 
@@ -18,7 +18,15 @@ export const Img: React.FC<ImgProps> = ({
   alt,
   width,
   height,
-  rounded
+  rounded,
 }) => {
-  return <StyledImg src={src} alt={alt} width={width} height={height} rounded={rounded} />;
+  return (
+    <StyledImg
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      rounded={rounded}
+    />
+  );
 };

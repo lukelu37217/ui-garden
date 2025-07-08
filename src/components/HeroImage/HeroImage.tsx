@@ -35,15 +35,13 @@ export const HeroImage: React.FC<HeroImageProps> = ({
   title,
   subtitle,
   buttonText,
-  onButtonClick
+  onButtonClick,
 }) => {
   return (
     <HeroContainer backgroundImage={backgroundImage}>
       <Title>{title}</Title>
       {subtitle && <Subtitle>{subtitle}</Subtitle>}
-      {buttonText && (
-        <Button onClick={onButtonClick}>{buttonText}</Button>
-      )}
+      {buttonText && <Button onClick={onButtonClick}>{buttonText}</Button>}
     </HeroContainer>
   );
 };

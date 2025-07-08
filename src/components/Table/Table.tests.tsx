@@ -1,12 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import {
-  Table,
-  TableHeader,
-  TableRow,
-  TableCell,
-  TableFooter
-} from './index';
+import { Table, TableHeader, TableRow, TableCell, TableFooter } from './index';
 
 describe('Table component', () => {
   it('should render table headers', () => {

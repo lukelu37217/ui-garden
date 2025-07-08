@@ -6,7 +6,7 @@ const meta: Meta<typeof Text> = {
   component: Text,
   argTypes: {
     content: { control: 'text' },
-    size: { control: 'text' }
+    size: { control: 'text' },
   },
 };
 export default meta;
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Text>;
 export const Default: Story = {
   args: {
     content: 'Hello Text',
-    size: '16px'
+    size: '16px',
   },
 };

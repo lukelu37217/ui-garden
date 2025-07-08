@@ -9,7 +9,7 @@ const meta: Meta<typeof Img> = {
     alt: { control: 'text' },
     width: { control: 'text' },
     height: { control: 'text' },
-    rounded: { control: 'boolean' }
+    rounded: { control: 'boolean' },
   },
 };
 export default meta;

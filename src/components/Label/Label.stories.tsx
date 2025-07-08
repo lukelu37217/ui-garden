@@ -6,7 +6,7 @@ const meta: Meta<typeof Label> = {
   component: Label,
   argTypes: {
     text: { control: 'text' },
-    color: { control: 'color' }
+    color: { control: 'color' },
   },
 };
 export default meta;
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Label>;
 export const Default: Story = {
   args: {
     text: 'Label Text',
-    color: 'black'
+    color: 'black',
   },
 };

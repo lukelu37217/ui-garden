@@ -6,7 +6,7 @@ const meta: Meta<typeof Dropdown> = {
   component: Dropdown,
   argTypes: {
     options: { control: 'object' },
-    disabled: { control: 'boolean' }
+    disabled: { control: 'boolean' },
   },
 };
 export default meta;

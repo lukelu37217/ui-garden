@@ -1,11 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import {
-  Table,
-  TableHeader,
-  TableRow,
-  TableCell,
-  TableFooter
-} from './index';
+import { Table, TableHeader, TableRow, TableCell, TableFooter } from './index';
 
 const meta: Meta<typeof Table> = {
   title: 'Components/Table',

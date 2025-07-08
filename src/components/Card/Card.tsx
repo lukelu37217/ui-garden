@@ -7,7 +7,7 @@ const CardContainer = styled.div`
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const Image = styled.img`
@@ -45,7 +45,7 @@ export const Card: React.FC<CardProps> = ({
   title,
   description,
   buttonText,
-  onButtonClick
+  onButtonClick,
 }) => {
   return (
     <CardContainer>
@@ -53,9 +53,7 @@ export const Card: React.FC<CardProps> = ({
       <Content>
         <Title>{title}</Title>
         {description && <Description>{description}</Description>}
-        {buttonText && (
-          <Button onClick={onButtonClick}>{buttonText}</Button>
-        )}
+        {buttonText && <Button onClick={onButtonClick}>{buttonText}</Button>}
       </Content>
     </CardContainer>
   );

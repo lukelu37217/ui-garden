@@ -5,8 +5,8 @@ import { DropdownProps } from './Dropdown.types';
 const StyledSelect = styled.select<{ disabled?: boolean }>`
   padding: 8px;
   border-radius: 4px;
-  background-color: ${props => props.disabled ? 'grey' : 'white'};
-  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
+  background-color: ${props => (props.disabled ? 'grey' : 'white')};
+  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
 export const Dropdown: React.FC<DropdownProps> = ({ options, disabled }) => {

@@ -8,5 +8,5 @@ export type {
   TableHeaderProps,
   TableRowProps,
   TableCellProps,
-  TableFooterProps
+  TableFooterProps,
 } from './Table.types';

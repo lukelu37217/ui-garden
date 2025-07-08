@@ -8,7 +8,7 @@ const meta: Meta<typeof HeroImage> = {
     backgroundImage: { control: 'text' },
     title: { control: 'text' },
     subtitle: { control: 'text' },
-    buttonText: { control: 'text' }
+    buttonText: { control: 'text' },
   },
 };
 export default meta;
