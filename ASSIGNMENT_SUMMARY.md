@@ -20,7 +20,7 @@
 - **Automatic Enforcement**: Same checks as local pre-commit hooks
 
 ### ✅ 4. Docker Implementation
-- **Container Name**: `lu_luke_coding_assignment13`
+- **Container Name**: `Lu_Luke_coding_assignment13`
 - **Working Directory**: `/Lu_Luke_ui_garden_build_checks`
 - **Port**: 8018 (as required)
 - **Quality Gates**: Prettier, ESLint, and tests run during build
@@ -121,10 +121,10 @@ npm run test:ci        # Run tests in CI mode
 ### Docker Deployment
 ```bash
 # Build the container
-docker build -t lu_luke_coding_assignment13 .
+docker build -t Lu_Luke_coding_assignment13 .
 
 # Run on required port 8018
-docker run -d -p 8018:8018 --name lu_luke_coding_assignment13 lu_luke_coding_assignment13
+docker run -d -p 8018:8018 --name Lu_Luke_coding_assignment13 Lu_Luke_coding_assignment13
 
 # Access application
 # http://localhost:8018
@@ -168,7 +168,7 @@ docker run -d -p 8018:8018 --name lu_luke_coding_assignment13 lu_luke_coding_ass
 | Pre-commit Tests | ✅ | Husky pre-push hook |
 | GitHub Actions CI/CD | ✅ | .github/workflows/ci.yml |
 | Docker on port 8018 | ✅ | Custom nginx.conf |
-| Container name | ✅ | lu_luke_coding_assignment13 |
+| Container name | ✅ | Lu_Luke_coding_assignment13 |
 | Working directory | ✅ | /Lu_Luke_ui_garden_build_checks |
 | Quality checks in build | ✅ | Integrated in Dockerfile |
 | Bypass protection | ✅ | GitHub Actions validates |

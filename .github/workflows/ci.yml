@@ -58,11 +58,11 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t lu_luke_coding_assignment13 .
+        docker build -t Lu_Luke_coding_assignment13 .
 
     - name: Test Docker container
       run: |
-        docker run -d -p 8018:80 --name test-container lu_luke_coding_assignment13
+        docker run -d -p 8018:80 --name test-container Lu_Luke_coding_assignment13
         sleep 10
         curl -f http://localhost:8018 || exit 1
         docker stop test-container

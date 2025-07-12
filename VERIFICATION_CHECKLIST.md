@@ -30,8 +30,8 @@ npm run build          # Should build without errors
 ### 3. Docker Verification
 ```bash
 # Build and run Docker container
-docker build -t lu_luke_coding_assignment13 .
-docker run -d -p 8018:8018 --name lu_luke_coding_assignment13 lu_luke_coding_assignment13
+docker build -t Lu_Luke_coding_assignment13 .
+docker run -d -p 8018:8018 --name Lu_Luke_coding_assignment13 Lu_Luke_coding_assignment13
 
 # Verify application is running
 curl http://localhost:8018
@@ -42,8 +42,8 @@ docker ps
 # Should show container running on port 8018
 
 # Cleanup
-docker stop lu_luke_coding_assignment13
-docker rm lu_luke_coding_assignment13
+docker stop Lu_Luke_coding_assignment13
+docker rm Lu_Luke_coding_assignment13
 ```
 
 ### 4. Quality Pipeline Test
@@ -56,7 +56,7 @@ docker rm lu_luke_coding_assignment13
 ## 📋 Assignment Requirements Checklist
 
 ### ✅ Complete Submission Requirements
-- [x] **Dockerfile**: Creates container named "lu_luke_coding_assignment13"
+- [x] **Dockerfile**: Creates container named "Lu_Luke_coding_assignment13"
 - [x] **Working Directory**: Uses "/Lu_Luke_ui_garden_build_checks"
 - [x] **Port 8018**: Application accessible on localhost:8018
 - [x] **README.md**: Complete instructions for running on localhost:8018

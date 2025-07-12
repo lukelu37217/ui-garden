@@ -83,12 +83,12 @@ The pre-commit hooks are automatically set up after `npm install`. They will:
 
 Build the Docker image:
 ```bash
-docker build -t lu_luke_coding_assignment13 .
+docker build -t Lu_Luke_coding_assignment13 .
 ```
 
 Run the container on port 8018:
 ```bash
-docker run -d -p 8018:8018 --name lu_luke_coding_assignment13 lu_luke_coding_assignment13
+docker run -d -p 8018:8018 --name Lu_Luke_coding_assignment13 Lu_Luke_coding_assignment13
 ```
 
 ### Access the Application
@@ -99,7 +99,7 @@ http://127.0.0.1:8018
 ```
 
 ### Container Details
-- **Container Name**: `lu_luke_coding_assignment13`
+- **Container Name**: `Lu_Luke_coding_assignment13`
 - **Working Directory**: `/Lu_Luke_ui_garden_build_checks`
 - **Port**: 8018
 - **Quality Checks**: The Docker build process runs ESLint, Prettier, and all tests before creating the production build
@@ -107,13 +107,13 @@ http://127.0.0.1:8018
 ### Stop and Clean Up
 ```bash
 # Stop the container
-docker stop lu_luke_coding_assignment13
+docker stop Lu_Luke_coding_assignment13
 
 # Remove the container
-docker rm lu_luke_coding_assignment13
+docker rm Lu_Luke_coding_assignment13
 
 # Remove the image (optional)
-docker rmi lu_luke_coding_assignment13
+docker rmi Lu_Luke_coding_assignment13
 ```
 
 ## CI/CD Pipeline
