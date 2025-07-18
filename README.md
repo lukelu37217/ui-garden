@@ -83,12 +83,12 @@ The pre-commit hooks are automatically set up after `npm install`. They will:
 
 Build the Docker image:
 ```bash
-docker build -t Lu_Luke_coding_assignment13 .
+docker build -t lu_luke_coding_assignment13 .
 ```
 
 Run the container on port 8018:
 ```bash
-docker run -d -p 8018:8018 --name Lu_Luke_coding_assignment13 Lu_Luke_coding_assignment13
+docker run -d -p 8018:8018 --name lu_luke_coding_assignment13 lu_luke_coding_assignment13
 ```
 
 ### Access the Application
@@ -171,54 +171,74 @@ This project enforces the following quality standards:
 - **CI/CD**: Automated quality checks on every push/PR
 - **Docker**: Production-ready containerized deployment
 
-### Build docker image
+## Quick Demo Script
 
+To quickly demonstrate all features for Assignment 13, run:
+
+### Windows Command Prompt:
 ```bash
-docker build -t ui-garden .
+demo-assignment13.bat
 ```
 
-### Run docker container
-
-To run the container with the required name and port mapping, use:
-
-```bash
-docker run -d --name Lu_Luke_coding_assignment12 -p 8083:80 ui-garden
+### PowerShell:
+```powershell
+.\demo-assignment13.ps1
 ```
 
-Then visit:
+These scripts will:
+1. ✅ Verify project structure
+2. ✅ Install dependencies
+3. ✅ Run all code quality checks (Prettier, ESLint, Tests)
+4. ✅ Build the React application
+5. ✅ Build the Docker image
+6. ✅ Start the container on port 8018
 
-```
-http://localhost:8083
-```
+## Assignment 13 Requirements Compliance
 
----
+### ✅ Pre-commit Hooks (Husky)
+- **Prettier**: ✅ Automatic code formatting
+- **ESLint**: ✅ Code linting and quality checks  
+- **Tests**: ✅ All tests must pass before commit
 
-## Docker Compose (optional)
+### ✅ GitHub Actions CI/CD
+- **Quality Checks**: ✅ Runs on every push and pull request
+- **Same Checks**: ✅ Executes the same quality checks as pre-commit hooks
+- **Docker Build**: ✅ Builds and tests the Docker container
+- **Failure Notifications**: ✅ Users are notified when builds fail
 
-If you prefer using docker-compose, you can create a `docker-compose.yml` file:
+### ✅ Docker Requirements
+- **Container Name**: ✅ `Lu_Luke_coding_assignment13`
+- **Working Directory**: ✅ `/Lu_Luke_ui_garden_build_checks`
+- **Port**: ✅ 8018 (localhost:8018 / 127.0.0.1:8018)
+- **Quality Gates**: ✅ Prettier, ESLint, and tests run during build
 
-```yaml
-version: '3.8'
+## For Teacher Demonstration
 
-services:
-  ui-garden:
-    build: .
-    container_name: Lu_Luke_coding_assignment12
-    ports:
-      - "8083:80"
-```
+1. **Show Code Quality Tools**:
+   ```bash
+   npm run lint        # ESLint check
+   npm run format:check # Prettier check
+   npm run test:ci     # Run tests
+   ```
 
-Run with:
+2. **Demonstrate Pre-commit Hooks**:
+   - Make a code change with formatting issues
+   - Try to commit → hooks will auto-fix and require re-staging
 
-```bash
-docker-compose up --build
-```
+3. **Show GitHub Actions**:
+   - Visit: https://github.com/lukelu37217/ui-garden/actions
+   - Show CI/CD pipeline running on commits
 
----
+4. **Docker Deployment**:
+   ```bash
+   docker build -t lu_luke_coding_assignment13 .
+   docker run -d -p 8018:8018 --name lu_luke_coding_assignment13 lu_luke_coding_assignment13
+   ```
+   - Visit: http://localhost:8018
 
 ## Deployment
 
-The container serves a production build from the Create React App build folder using Nginx.
+The container serves a production build from the Create React App build folder using Nginx on port 8018.
 
 ---
 
