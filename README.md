@@ -1,11 +1,61 @@
-# UI Component Library with CI/CD - Coding Assignment 13
+# Assignment 13 - UI Component Library with Code Quality Checks
+
+## 🎯 Project Overview
+
+This is Assignment 13 - an enhanced version of the UI Component Library from Assignment 12, now featuring comprehensive code quality checks, CI/CD pipeline, and Docker deployment.
+
+## 🚀 Live Demo
+
+**Local Deployment**: http://localhost:8018
+
+## 📋 Assignment Requirements Met
+
+### ✅ Code Quality Checks
+- **Husky Pre-commit Hooks** - Automatic code quality checks before commits
+- **Prettier** - Code formatting enforcement  
+- **ESLint** - Code linting and best practices
+- **Jest Tests** - Unit testing with coverage reports
+
+### ✅ CI/CD Pipeline
+- **GitHub Actions** - Automated testing on push/PR
+- **Multi-Node Testing** - Node.js 18.x and 20.x
+- **Quality Gates** - Build fails if checks don't pass
+
+### ✅ Docker Deployment
+- **Container Name**: `lu_luke_coding_assignment13`
+- **Working Directory**: `Lu_Luke_ui_garden_build_checks`
+- **Port**: 8018
+- **Production Build** with Nginx
+
+## 🛠️ Quick Start
+
+### Prerequisites
+- Docker Desktop installed
+- Git installed
+
+### Running the Application
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/lukelu37217/ui-garden.git
+   cd ui-garden
+   ```
+
+2. **Build and run with Docker**:
+   ```bash
+   docker build -t lu_luke_coding_assignment13 .
+   docker run -d -p 8018:8018 --name lu_luke_coding_assignment13 lu_luke_coding_assignment13
+   ```
+
+3. **Access the application**:
+   Open http://localhost:8018 in your browser
 
 ## Author
 Lu Luke
 
 ## Description
 
-This project is a React + TypeScript Component Library with integrated code quality checks and CI/CD pipeline. It includes code quality tools like ESLint, Prettier, and Husky for pre-commit hooks, ensuring consistent code quality.
+This project demonstrates mastery of build tools, code quality integration, and CI/CD processes for web application delivery. Built on Assignment 12 foundation with enhanced quality checks.
 
 ### Components Included:
 - Button
