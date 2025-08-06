@@ -1,33 +1,50 @@
 # Assignment 13 - UI Component Library with Code Quality Checks
 
-## 🎯 Project Overview
+## Project Overview
 
-This is Assignment 13 - an enhanced version of the UI Component Library from Assignment 12, now featuring comprehensive code quality checks, CI/CD pipeline, and Docker deployment.
+This is Assignment 13 - an enhanced version of the UI Component Library from Assignment 12, now featuring comprehensive code quality checks, CI/CD pipeline, an## Assignment 13 Requirements Compliance
 
-## 🚀 Live Demo
+### Pre-commit Hooks (Husky)
+- **Prettier**: Automatic code formatting
+- **ESLint**: Code linting and quality checks  
+- **Tests**: All tests must pass before commit
+
+### GitHub Actions CI/CD
+- **Quality Checks**: Runs on every push and pull request
+- **Same Checks**: Executes the same quality checks as pre-commit hooks
+- **Docker Build**: Builds and tests the Docker container
+- **Failure Notifications**: Users are notified when builds fail
+
+### Docker Requirements
+- **Container Name**: `Lu_Luke_coding_assignment13`
+- **Working Directory**: `/Lu_Luke_ui_garden_build_checks`
+- **Port**: 8018 (localhost:8018 / 127.0.0.1:8018)
+- **Quality Gates**: Prettier, ESLint, and tests run during buildt.
+
+## Live Demo
 
 **Local Deployment**: http://localhost:8018
 
-## 📋 Assignment Requirements Met
+## Assignment Requirements Met
 
-### ✅ Code Quality Checks
+### Code Quality Checks
 - **Husky Pre-commit Hooks** - Automatic code quality checks before commits
 - **Prettier** - Code formatting enforcement  
 - **ESLint** - Code linting and best practices
 - **Jest Tests** - Unit testing with coverage reports
 
-### ✅ CI/CD Pipeline
+### CI/CD Pipeline
 - **GitHub Actions** - Automated testing on push/PR
 - **Multi-Node Testing** - Node.js 18.x and 20.x
 - **Quality Gates** - Build fails if checks don't pass
 
-### ✅ Docker Deployment
+### Docker Deployment
 - **Container Name**: `lu_luke_coding_assignment13`
 - **Working Directory**: `Lu_Luke_ui_garden_build_checks`
 - **Port**: 8018
 - **Production Build** with Nginx
 
-## 🛠️ Quick Start
+## Quick Start
 
 ### Prerequisites
 - Docker Desktop installed
@@ -236,27 +253,27 @@ demo-assignment13.bat
 ```
 
 These scripts will:
-1. ✅ Verify project structure
-2. ✅ Install dependencies
-3. ✅ Run all code quality checks (Prettier, ESLint, Tests)
-4. ✅ Build the React application
-5. ✅ Build the Docker image
-6. ✅ Start the container on port 8018
+1. Verify project structure
+2. Install dependencies
+3. Run all code quality checks (Prettier, ESLint, Tests)
+4. Build the React application
+5. Build the Docker image
+6. Start the container on port 8018
 
 ## Assignment 13 Requirements Compliance
 
-### ✅ Pre-commit Hooks (Husky)
+### Pre-commit Hooks (Husky)
 - **Prettier**: ✅ Automatic code formatting
 - **ESLint**: ✅ Code linting and quality checks  
 - **Tests**: ✅ All tests must pass before commit
 
-### ✅ GitHub Actions CI/CD
+### GitHub Actions CI/CD
 - **Quality Checks**: ✅ Runs on every push and pull request
 - **Same Checks**: ✅ Executes the same quality checks as pre-commit hooks
 - **Docker Build**: ✅ Builds and tests the Docker container
 - **Failure Notifications**: ✅ Users are notified when builds fail
 
-### ✅ Docker Requirements
+### Docker Requirements
 - **Container Name**: ✅ `Lu_Luke_coding_assignment13`
 - **Working Directory**: ✅ `/Lu_Luke_ui_garden_build_checks`
 - **Port**: ✅ 8018 (localhost:8018 / 127.0.0.1:8018)
