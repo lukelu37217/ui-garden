@@ -46,7 +46,7 @@ function App() {
           </div>
 
           <Card
-            image="https://via.placeholder.com/300x200"
+            image="https://picsum.photos/300/200?random=1"
             title="Component Library Card"
             description="This card demonstrates our reusable UI components"
             buttonText="Learn More"
