@@ -1,5 +1,7 @@
 # Assignment 13 - UI Component Library with Code Quality Checks
 
+[![CI Pipeline](https://github.com/lukelu37217/ui-garden/actions/workflows/ci.yml/badge.svg)](https://github.com/lukelu37217/ui-garden/actions/workflows/ci.yml)
+
 ## Project Overview
 
 This is Assignment 13 - an enhanced version of the UI Component Library from Assignment 12, now featuring comprehensive code quality checks, CI/CD pipeline, an## Assignment 13 Requirements Compliance
