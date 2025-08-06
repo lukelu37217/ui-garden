@@ -1,3 +1,9 @@
+# Assignment 13 - UI Component Library with Code Quality Checks
+# DockerFile builds container that hosts production build of create react app
+# Container name: lu_luke_coding_assignment13  
+# Working directory: lu_luke_ui_garden_build_checks
+# Hosts site on localhost:8018
+
 # Build stage
 FROM node:20-alpine AS build
 
