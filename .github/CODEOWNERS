@@ -1,0 +1,16 @@
+# Code owners for Assignment 13 UI Component Library
+# This ensures code quality and review process
+
+# Global owners
+* @lukelu37217
+
+# Component specific owners
+/src/components/ @lukelu37217
+
+# CI/CD configuration
+/.github/ @lukelu37217
+/Dockerfile @lukelu37217
+
+# Documentation
+/README.md @lukelu37217
+/TEACHER_*.md @lukelu37217
