@@ -56,11 +56,13 @@ function App() {
           <div
             style={{ fontSize: '14px', color: '#61dafb', marginTop: '20px' }}
           >
-            <p>Code Quality: Prettier + ESLint + Tests</p>
-            <p>Pre-commit Hooks: Husky + Lint-staged</p>
-            <p>CI/CD Pipeline: GitHub Actions</p>
-            <p>Docker Deployment: Port 8018</p>
-            <p>GitHub: https://github.com/lukelu37217/ui-garden-assignment13</p>
+            <p>✅ Code Quality: Prettier + ESLint + Tests</p>
+            <p>✅ Pre-commit Hooks: Husky + Lint-staged</p>
+            <p>✅ CI/CD Pipeline: GitHub Actions</p>
+            <p>✅ Docker Deployment: Port 8018</p>
+            <p>
+              📝 GitHub: https://github.com/lukelu37217/ui-garden-assignment13
+            </p>
           </div>
         </div>
       </header>
