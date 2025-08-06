@@ -1,5 +1,6 @@
 {
   "name": "ui-garden",
+    "description": "A comprehensive UI component library with modern React components - Assignment 13",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
