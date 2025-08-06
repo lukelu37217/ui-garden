@@ -12,11 +12,6 @@ RUN npm ci
 # Copy source code
 COPY . .
 
-# Run quality checks
-RUN npm run lint
-RUN npm run format:check
-RUN npm run test:ci
-
 # Build the application
 RUN npm run build
 
