@@ -46,7 +46,7 @@ function App() {
           </div>
 
           <Card
-            image="https://picsum.photos/300/200?random=1"
+            image="https://via.placeholder.com/300x200"
             title="Component Library Card"
             description="This card demonstrates our reusable UI components"
             buttonText="Learn More"
@@ -56,13 +56,11 @@ function App() {
           <div
             style={{ fontSize: '14px', color: '#61dafb', marginTop: '20px' }}
           >
-            <p>✅ Code Quality: Prettier + ESLint + Tests</p>
-            <p>✅ Pre-commit Hooks: Husky + Lint-staged</p>
-            <p>✅ CI/CD Pipeline: GitHub Actions</p>
-            <p>✅ Docker Deployment: Port 8018</p>
-            <p>
-              📝 GitHub: https://github.com/lukelu37217/ui-garden-assignment13
-            </p>
+            <p>Code Quality: Prettier + ESLint + Tests</p>
+            <p>Pre-commit Hooks: Husky + Lint-staged</p>
+            <p>CI/CD Pipeline: GitHub Actions</p>
+            <p>Docker Deployment: Port 8018</p>
+            <p>GitHub: https://github.com/lukelu37217/ui-garden-assignment13</p>
           </div>
         </div>
       </header>
@@ -71,3 +69,4 @@ function App() {
 }
 
 export default App;
+//Test
