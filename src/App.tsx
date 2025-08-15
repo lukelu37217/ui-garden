@@ -1,72 +1,121 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Button } from './components/Button';
 import { Card } from './components/Card';
+import { HeroImage } from './components/HeroImage';
 import { Text } from './components/Text';
-import { Label } from './components/Label';
-import { Dropdown } from './components/Dropdown';
+import { Portfolio } from './components/Portfolio';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  if (currentPage === 'portfolio') {
+    return <Portfolio onNavigateHome={() => setCurrentPage('home')} />;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>UI Component Library - Assignment 13</h1>
-        <p>Lu Luke - UI Component Library with CI/CD Pipeline</p>
+      {/* Page Navigation */}
+      <nav className="page-nav">
+        <div className="container">
+          <Button label="Home" onClick={() => setCurrentPage('home')} />
+          <Button
+            label="Portfolio"
+            onClick={() => setCurrentPage('portfolio')}
+          />
+        </div>
+      </nav>
 
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '20px',
-            marginTop: '30px',
-          }}
-          className="component-showcase"
-        >
-          <div
-            style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}
-          >
-            <Label text="Button Components:" />
-            <div style={{ display: 'flex', gap: '10px' }}>
-              <Button
-                label="Primary Button"
-                onClick={() => alert('Button clicked!')}
+      {/* Hero Section */}
+      <section className="hero-section">
+        <HeroImage
+          backgroundImage="/images/hero-background.jpg"
+          title="Luke Lu - Full Stack Developer"
+          subtitle="Analytical and adaptable web development student from Winnipeg"
+          buttonText="View My Portfolio"
+          onButtonClick={() => setCurrentPage('portfolio')}
+        />
+      </section>
+
+      {/* Centered Page Content */}
+      <main className="page-content">
+        {/* Work Section */}
+        <section id="work" className="work-section">
+          <div className="container">
+            <Text content="My Work & Projects" size="large" />
+            <div className="projects-grid">
+              <Card
+                image="/images/ui-component-library.jpg"
+                title="Recent Projects"
+                description="View my latest work including UI component libraries, e-commerce platforms, and task management systems built with modern web technologies."
+                buttonText="View Projects"
+                onButtonClick={() => setCurrentPage('portfolio')}
               />
-              <Button label="Disabled Button" disabled onClick={() => {}} />
             </div>
           </div>
+        </section>
 
-          <div>
-            <Label text="Text Component:" />
-            <Text content="This is a styled text component from our UI library" />
+        {/* Skills Section */}
+        <section className="skills-section">
+          <div className="container">
+            <Text content="Technical Skills" size="large" />
+            <div className="skills-grid">
+              {/* Revert to original single-card style for the Home page */}
+              <Card
+                image="/images/frontend-development.jpg"
+                title="Technical Skills"
+                description="Frontend: React, TypeScript, JavaScript, HTML5, CSS3. Backend: Node.js & Express. Databases: MongoDB, PostgreSQL. Tools: Git, Docker, VS Code."
+                buttonText="View Skills"
+                onButtonClick={() => setCurrentPage('portfolio')}
+              />
+            </div>
           </div>
+        </section>
 
-          <div>
-            <Label text="Dropdown Component:" />
-            <Dropdown options={['Option 1', 'Option 2', 'Option 3']} />
+        {/* Resources Section */}
+        <section className="resources-section">
+          <div className="container">
+            <Text content="Learning Resources" size="large" />
+            <div className="resources-grid">
+              <Card
+                image="/images/mdn-docs.jpg"
+                title="Learning Resources"
+                description="Including MDN Web Docs, React documentation, TypeScript handbook, GitHub project management and other essential development resources."
+                buttonText="View Resources"
+                onButtonClick={() => setCurrentPage('portfolio')}
+              />
+            </div>
           </div>
+        </section>
 
-          <Card
-            image="https://via.placeholder.com/300x200"
-            title="Component Library Card"
-            description="This card demonstrates our reusable UI components"
-            buttonText="Learn More"
-            onButtonClick={() => alert('Card button clicked!')}
-          />
-
-          <div
-            style={{ fontSize: '14px', color: '#61dafb', marginTop: '20px' }}
-          >
-            <p>Code Quality: Prettier + ESLint + Tests</p>
-            <p>Pre-commit Hooks: Husky + Lint-staged</p>
-            <p>CI/CD Pipeline: GitHub Actions</p>
-            <p>Docker Deployment: Port 8018</p>
-            <p>GitHub: https://github.com/lukelu37217/ui-garden-assignment13</p>
+        {/* Developer Setup Section */}
+        <section className="setup-section">
+          <div className="container">
+            <Text content="Development Environment" size="large" />
+            <div className="setup-grid">
+              <Card
+                image="/images/vscode-setup.jpg"
+                title="Development Setup"
+                description="Using VS Code as primary development environment with React/Redux plugins, Prettier, ESLint and other productivity extensions."
+                buttonText="View Setup"
+                onButtonClick={() => setCurrentPage('portfolio')}
+              />
+            </div>
           </div>
-        </div>
-      </header>
+        </section>
+
+        {/* Footer */}
+        <footer className="footer">
+          <div className="container">
+            <Text
+              content="© 2025 Luke Lu. Built with React and TypeScript. Assignment 14 - Personal Portfolio Website."
+              size="small"
+            />
+          </div>
+        </footer>
+      </main>
     </div>
   );
 }
 
 export default App;
-//Test

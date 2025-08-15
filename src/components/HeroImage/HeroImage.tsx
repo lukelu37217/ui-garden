@@ -22,12 +22,13 @@ const Subtitle = styled.p`
 `;
 
 const Button = styled.button`
-  padding: 10px 20px;
+  padding: 12px 22px; /* larger button */
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 17px; /* match site buttons */
 `;
 
 export const HeroImage: React.FC<HeroImageProps> = ({

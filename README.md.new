@@ -1,0 +1,223 @@
+# Portfolio Website - Coding Assignment 14
+
+## Overview
+This is a portfolio website built using the React component library from previous assignments. The website showcases my coursework, skills, projects, and development setup as part of my web development program.
+
+## Live Demo
+The portfolio website is containerized and runs at `localhost:5575` (127.0.0.1:5575)
+
+## Features
+
+### Portfolio Sections
+1. **Basic Information** - Personal introduction and contact details
+2. **Work & Projects** - Showcase of completed projects including:
+   - UI Component Library
+   - E-commerce Web Application
+   - Task Management System
+3. **Skills & Technologies** - Technical skills organized by category:
+   - Frontend Development
+   - Backend Development
+   - Database & DevOps
+4. **Learning Resources** - Essential tools and documentation
+5. **Developer Setup** - Development environment configuration
+
+### Technical Implementation
+- Built with React 18 and TypeScript
+- Uses custom component library with reusable components
+- Responsive design with CSS Grid and Flexbox
+- Production-optimized Docker container
+- Nginx web server configuration for port 5575
+
+## Quick Start
+
+### Prerequisites
+- Docker installed on your system
+- Git (optional, for cloning)
+
+### Running the Application
+
+1. **Clone or Download the Repository**
+   ```bash
+   git clone https://github.com/lukelu37217/ui-garden.git
+   cd ui-garden
+   ```
+
+2. **Build the Docker Container**
+   ```bash
+   docker build -t lu_luke_coding_assignment14 .
+   ```
+
+3. **Run the Container**
+   ```bash
+   docker run -d -p 5575:5575 --name lu_luke_coding_assignment14 lu_luke_coding_assignment14
+   ```
+
+4. **Access the Website**
+   Open your browser and navigate to:
+   - http://localhost:5575
+   - http://127.0.0.1:5575
+
+### Alternative: One-Line Command
+```bash
+docker run -d -p 5575:5575 --name lu_luke_coding_assignment14 $(docker build -q .)
+```
+
+## Docker Configuration
+
+### Container Details
+- **Container Name**: `lu_luke_coding_assignment14`
+- **Working Directory**: `/lu_luke_final_site`
+- **Port**: 5575 (mapped to host port 5575)
+- **Base Image**: nginx:alpine (production)
+- **Build Image**: node:20-alpine
+
+### Docker Features
+- Multi-stage build for optimized production image
+- Nginx web server for high performance
+- Health check endpoint
+- Production-ready React build
+- Proper error handling and logging
+
+## Development
+
+### Local Development Setup
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+
+# Run tests
+npm test
+
+# Build for production
+npm run build
+
+# Run Storybook (component documentation)
+npm run storybook
+```
+
+### Component Library
+The portfolio uses the following custom components:
+- `Button` - Interactive buttons with various styles
+- `Card` - Content containers for projects and skills
+- `HeroImage` - Hero section with background image and call-to-action
+- `Text` - Typography component with size variants
+
+## Project Structure
+```
+ui-garden/
+├── public/                 # Static assets
+│   ├── images/            # Portfolio images
+│   └── index.html         # HTML template
+├── src/
+│   ├── components/        # Reusable component library
+│   │   ├── Button/
+│   │   ├── Card/
+│   │   ├── HeroImage/
+│   │   ├── Text/
+│   │   └── ...
+│   ├── App.tsx           # Main portfolio component
+│   ├── App.css          # Portfolio styles
+│   └── index.tsx        # React entry point
+├── Dockerfile           # Container configuration
+├── nginx.conf          # Nginx server configuration
+└── README.md           # This file
+```
+
+## Assignment Requirements Fulfilled
+
+### ✅ Complete Submission
+- [x] Dockerfile included
+- [x] README.md with instructions
+- [x] Working link to Git Repository
+- [x] Site runs at localhost:5575
+
+### ✅ Docker Configuration
+- [x] Creates container hosting production build
+- [x] Container name: `lu_luke_coding_assignment14`
+- [x] Working directory: `/lu_luke_final_site`
+- [x] Hosts at localhost:5575
+
+### ✅ Portfolio Content
+- [x] Basic information section
+- [x] Work section with projects (Title, Description, Image, Link, Tech List)
+- [x] Skills section (Description, Languages/frameworks, Tools)
+- [x] Resources section (Title, Image/Icon, Summary, Link)
+- [x] Developer Setup section (VS Code, Terminal, Font preferences)
+
+## Technologies Used
+
+### Frontend
+- React 18.2.0
+- TypeScript 4.9.5
+- CSS3 with Grid & Flexbox
+- Custom Component Library
+
+### Development Tools
+- Create React App
+- Storybook (component documentation)
+- Jest (testing)
+- ESLint & Prettier (code quality)
+
+### DevOps & Deployment
+- Docker (containerization)
+- Nginx (web server)
+- Multi-stage builds
+- Health checks
+
+## Performance Optimizations
+- Production build with code splitting
+- Static asset optimization
+- Nginx gzip compression
+- Efficient Docker layering
+- Health monitoring
+
+## Browser Support
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Troubleshooting
+
+### Container Issues
+```bash
+# Check if container is running
+docker ps
+
+# View container logs
+docker logs lu_luke_coding_assignment14
+
+# Stop container
+docker stop lu_luke_coding_assignment14
+
+# Remove container
+docker rm lu_luke_coding_assignment14
+
+# Remove image
+docker rmi lu_luke_coding_assignment14
+```
+
+### Port Conflicts
+If port 5575 is already in use:
+```bash
+# Check what's using the port
+netstat -ano | findstr :5575
+
+# Use a different host port
+docker run -d -p 5576:5575 --name lu_luke_coding_assignment14 lu_luke_coding_assignment14
+```
+
+## Contact Information
+- **Name**: Luke Lu
+- **Email**: luke.lu@example.com
+- **GitHub**: https://github.com/lukelu37217
+- **Assignment**: Coding Assignment 14 - Portfolio Website
+
+## License
+This project is for educational purposes as part of the Red River College web development program.
+
+---
+*Built with ❤️ using React, TypeScript, and Docker*

@@ -1,314 +1,236 @@
-# Assignment 13 - UI Component Library with Code Quality Checks
+# Assignment 14: Portfolio Website using Component Library
 
-[![CI Pipeline](https://github.com/lukelu37217/ui-garden/actions/workflows/ci.yml/badge.svg)](https://github.com/lukelu37217/ui-garden/actions/workflows/ci.yml)
+**Student:** Luke Lu  
+**Course:** Coding Assignment 14 - Building a Portfolio Website  
+**Container Name:** lu_luke_coding_assignment14  
+**Port:** 5575 (localhost:5575)
 
-## Project Overview
-
-This is Assignment 13 - an enhanced version of the UI Component Library from Assignment 12, now featuring comprehensive code quality checks, CI/CD pipeline, an## Assignment 13 Requirements Compliance
-
-### Pre-commit Hooks (Husky)
-- **Prettier**: Automatic code formatting
-- **ESLint**: Code linting and quality checks  
-- **Tests**: All tests must pass before commit
-
-### GitHub Actions CI/CD
-- **Quality Checks**: Runs on every push and pull request
-- **Same Checks**: Executes the same quality checks as pre-commit hooks
-- **Docker Build**: Builds and tests the Docker container
-- **Failure Notifications**: Users are notified when builds fail
-
-### Docker Requirements
-- **Container Name**: `Lu_Luke_coding_assignment13`
-- **Working Directory**: `/Lu_Luke_ui_garden_build_checks`
-- **Port**: 8018 (localhost:8018 / 127.0.0.1:8018)
-- **Quality Gates**: Prettier, ESLint, and tests run during buildt.
-
-## Live Demo
-
-**Local Deployment**: http://localhost:8018
-
-## Assignment Requirements Met
-
-### Code Quality Checks
-- **Husky Pre-commit Hooks** - Automatic code quality checks before commits
-- **Prettier** - Code formatting enforcement  
-- **ESLint** - Code linting and best practices
-- **Jest Tests** - Unit testing with coverage reports
-
-### CI/CD Pipeline
-- **GitHub Actions** - Automated testing on push/PR
-- **Multi-Node Testing** - Node.js 18.x and 20.x
-- **Quality Gates** - Build fails if checks don't pass
-
-### Docker Deployment
-- **Container Name**: `lu_luke_coding_assignment13`
-- **Working Directory**: `Lu_Luke_ui_garden_build_checks`
-- **Port**: 8018
-- **Production Build** with Nginx
-
-## Quick Start
+## Quick Start Instructions
 
 ### Prerequisites
-- Docker Desktop installed
-- Git installed
+- Docker installed on your system
+- Port 5575 available
 
 ### Running the Application
 
-1. **Clone the repository**:
+1. **Build and Run with Docker:**
    ```bash
-   git clone https://github.com/lukelu37217/ui-garden.git
-   cd ui-garden
+   # Stop any existing container
+   docker rm -f lu_luke_coding_assignment14
+
+   # Build the Docker image
+   docker build -t lu_luke_coding_assignment14 .
+
+   # Run the container on port 5575
+   docker run -d -p 5575:5575 --name lu_luke_coding_assignment14 lu_luke_coding_assignment14
    ```
 
-2. **Build and run with Docker**:
+2. **Access the Portfolio:**
+   - Open your browser and navigate to: `http://localhost:5575`
+   - Or: `http://127.0.0.1:5575`
+
+3. **Stop the Application:**
    ```bash
-   docker build -t lu_luke_coding_assignment13 .
-   docker run -d -p 8018:8018 --name lu_luke_coding_assignment13 lu_luke_coding_assignment13
+   docker stop lu_luke_coding_assignment14
    ```
 
-3. **Access the application**:
-   Open http://localhost:8018 in your browser
+## Assignment Requirements Fulfilled
 
-## Author
-Lu Luke
+### Portfolio Sections Implemented
 
-## Description
+✅ **Basic Information** - Personal introduction and professional summary  
+✅ **Work Projects** - Featured development projects with:
+   - Title and descriptions
+   - Project images  
+   - Links to repositories/demos
+   - Technology stacks used
 
-This project demonstrates mastery of build tools, code quality integration, and CI/CD processes for web application delivery. Built on Assignment 12 foundation with enhanced quality checks.
+✅ **Technical Skills** - Comprehensive skill showcase including:
+   - Frontend Development (React, TypeScript, HTML5, CSS3)
+   - Backend Development (Node.js, Express, APIs)
+   - DevOps & Tools (Docker, Git, CI/CD)
 
-### Components Included:
-- Button
-- Label
-- Text
-- Dropdown
-- RadioButton
-- Img
-- HeroImage
-- Card
-- Table (including TableHeader, TableRow, TableCell, TableFooter)
+✅ **Resources** - Curated development resources with:
+   - Title and descriptions
+   - Images/Icons
+   - Summary descriptions
+   - External links
 
-All components:
-- Are responsive
-- Have disabled states
-- Have Storybook stories
-- Have at least 2 tests each
-- Pass code quality checks (ESLint + Prettier)
+### Docker Configuration
 
-## Code Quality Features
+✅ **Container Name:** `lu_luke_coding_assignment14` (as required)  
+✅ **Working Directory:** `/lu_luke_final_site` (as required)  
+✅ **Port:** `5575` (maps to localhost:5575 as required)  
+✅ **Production Build:** Optimized React production build served by Nginx
 
-### Pre-commit Hooks (Husky)
-- **Prettier**: Automatic code formatting
-- **ESLint**: Code linting and quality checks
-- **Tests**: All tests must pass before commit
+### CI/CD Pipeline Implementation
 
-### CI/CD Pipeline (GitHub Actions)
-- Runs on every push and pull request
-- Executes the same quality checks as pre-commit hooks
-- Builds and tests the Docker container
-- Ensures consistent code quality across the team
+✅ **ESLint:** Code quality and linting checks  
+✅ **Prettier:** Automated code formatting  
+✅ **Tests:** Jest test suite with coverage reporting  
+✅ **GitHub Actions:** Automated pipeline for quality checks and builds
 
-## How to run locally
+## Technology Stack
+
+- **Frontend:** React 19.1.0 with TypeScript
+- **Styling:** Styled Components + Custom CSS for responsive design
+- **Build Tool:** Create React App with production optimizations
+- **Containerization:** Docker multi-stage build with Nginx
+- **Quality Tools:** ESLint, Prettier, Husky, Jest testing
+- **CI/CD:** GitHub Actions for automated testing and deployment
+
+## Installation & Setup
 
 ### Prerequisites
+
+- Docker and Docker Compose
+- Node.js 18+ (for local development)
+- Git
+
+### Local Development
+
 ```bash
+# Clone the repository
+git clone https://github.com/lukelu37217/ui-garden.git
+cd ui-garden
+
+# Install dependencies
 npm install
-```
 
-### Development
-```bash
-# Start Storybook
-npm run storybook
-# Visit: http://localhost:6006
-
-# Start React app
+# Start development server
 npm start
-# Visit: http://localhost:3000
+
+# Open http://localhost:3000 in your browser
 ```
 
-### Code Quality Commands
+### Docker Production Build
+
 ```bash
-# Run linting
-npm run lint
-npm run lint:fix
+# Build the Docker container
+docker build -t lu_luke_coding_assignment14 .
 
-# Run formatting
-npm run format
-npm run format:check
+# Run the container on port 5575
+docker run -p 5575:5575 --name lu_luke_coding_assignment14 lu_luke_coding_assignment14
 
-# Run tests
-npm test
-npm run test:ci
+# Access the portfolio at http://localhost:5575
 ```
 
-### Pre-commit Setup
-The pre-commit hooks are automatically set up after `npm install`. They will:
-1. Format your code with Prettier
-2. Lint your code with ESLint
-3. Run tests to ensure nothing is broken
+### Alternative Docker Run Command
 
-## Docker Deployment
-
-### Build and run with Docker
-
-Build the Docker image:
 ```bash
-docker build -t lu_luke_coding_assignment13 .
+# Run with port mapping
+docker run -d -p 5575:5575 --name lu_luke_coding_assignment14 lu_luke_coding_assignment14
 ```
-
-Run the container on port 8018:
-```bash
-docker run -d -p 8018:8018 --name lu_luke_coding_assignment13 lu_luke_coding_assignment13
-```
-
-### Access the Application
-Once the container is running, visit:
-```
-http://localhost:8018
-http://127.0.0.1:8018
-```
-
-### Container Details
-- **Container Name**: `Lu_Luke_coding_assignment13`
-- **Working Directory**: `/Lu_Luke_ui_garden_build_checks`
-- **Port**: 8018
-- **Quality Checks**: The Docker build process runs ESLint, Prettier, and all tests before creating the production build
-
-### Stop and Clean Up
-```bash
-# Stop the container
-docker stop Lu_Luke_coding_assignment13
-
-# Remove the container
-docker rm Lu_Luke_coding_assignment13
-
-# Remove the image (optional)
-docker rmi Lu_Luke_coding_assignment13
-```
-
-## CI/CD Pipeline
-
-This project includes a GitHub Actions workflow (`.github/workflows/ci.yml`) that:
-
-1. **Quality Checks**: Runs on Node.js 18.x and 20.x
-   - Prettier formatting check
-   - ESLint code quality check
-   - Complete test suite with coverage
-   - Production build verification
-
-2. **Docker Build**: (on main/master branch only)
-   - Builds the Docker image
-   - Tests the container functionality
-   - Ensures the application is accessible on port 8018
-
-### Workflow Triggers
-- Push to `main`, `master`, or `develop` branches
-- Pull requests to `main`, `master`, or `develop` branches
-
-## Development Workflow
-
-1. **Clone the repository**
-2. **Install dependencies**: `npm install`
-3. **Create a feature branch**: `git checkout -b feature/your-feature`
-4. **Make changes** (pre-commit hooks will automatically run)
-5. **Commit your changes**: `git commit -m "Your commit message"`
-6. **Push to GitHub**: `git push origin feature/your-feature`
-7. **Create a Pull Request** (CI pipeline will run automatically)
 
 ## Project Structure
+
 ```
 ui-garden/
-├── .github/workflows/     # GitHub Actions CI/CD
-├── .husky/               # Git hooks
+├── public/
+│   ├── images/               # Portfolio images and assets
+│   └── index.html           # HTML template
 ├── src/
-│   ├── components/       # UI components
-│   └── stories/         # Storybook stories
-├── .eslintrc.js         # ESLint configuration
-├── .prettierrc          # Prettier configuration
-├── Dockerfile           # Docker configuration
-├── nginx.conf           # Nginx configuration for port 8018
-└── package.json         # Dependencies and scripts
+│   ├── components/          # Reusable UI components
+│   │   ├── Button/
+│   │   ├── Card/
+│   │   ├── HeroImage/
+│   │   ├── Text/
+│   │   └── ...
+│   ├── App.tsx              # Main portfolio application
+│   └── index.tsx            # Application entry point
+├── Dockerfile               # Multi-stage Docker build
+├── nginx.conf              # Nginx production configuration
+├── package.json            # Dependencies and scripts
+└── README.md               # This file
 ```
 
-## Quality Standards
+## Component Library Usage
 
-This project enforces the following quality standards:
+The portfolio leverages the custom component library built in Assignment 13:
 
-- **Code Formatting**: Prettier with consistent style rules
-- **Code Quality**: ESLint with TypeScript and React rules
-- **Testing**: All components must have tests with coverage
-- **Git Hooks**: Pre-commit checks prevent poor quality commits
-- **CI/CD**: Automated quality checks on every push/PR
-- **Docker**: Production-ready containerized deployment
+- **Card Components:** Project showcases and skill presentations
+- **Button Components:** Navigation and call-to-action elements
+- **Text Components:** Consistent typography throughout
+- **HeroImage Component:** Landing page banner with background image
+- **Styled Components:** Custom responsive layouts and styling
 
-## Quick Demo Script
+##  Design Features
 
-To quickly demonstrate all features for Assignment 13, run:
+- **Responsive Design:** Mobile-first approach with CSS Grid and Flexbox
+- **Modern UI:** Clean, professional design with smooth transitions
+- **Accessibility:** Semantic HTML and proper ARIA labels
+- **Performance:** Optimized images and production build
+- **SEO-Friendly:** Proper meta tags and semantic structure
 
-### Windows Command Prompt:
+##  Available Scripts
+
 ```bash
-demo-assignment13.bat
+# Development
+npm start              # Start development server
+npm test               # Run test suite
+npm run build          # Create production build
+
+# Code Quality
+npm run lint           # Run ESLint
+npm run lint:fix       # Fix ESLint issues
+npm run format         # Format code with Prettier
+npm run format:check   # Check formatting
+
+# Testing
+npm run test:ci        # Run tests with coverage for CI
+
+# Storybook
+npm run storybook      # Start Storybook component explorer
+npm run build-storybook # Build Storybook for deployment
 ```
 
-### PowerShell:
-```powershell
-.\demo-assignment13.ps1
-```
+## 🚦 CI/CD Pipeline
 
-These scripts will:
-1. Verify project structure
-2. Install dependencies
-3. Run all code quality checks (Prettier, ESLint, Tests)
-4. Build the React application
-5. Build the Docker image
-6. Start the container on port 8018
+The project includes automated workflows:
 
-## Assignment 13 Requirements Compliance
+- **GitHub Actions:** Automated testing and building
+- **Prettier:** Code formatting checks
+- **ESLint:** Code quality and standards enforcement
+- **Husky:** Git hooks for pre-commit quality checks
 
-### Pre-commit Hooks (Husky)
-- **Prettier**: ✅ Automatic code formatting
-- **ESLint**: ✅ Code linting and quality checks  
-- **Tests**: ✅ All tests must pass before commit
+## Portfolio Highlights
 
-### GitHub Actions CI/CD
-- **Quality Checks**: ✅ Runs on every push and pull request
-- **Same Checks**: ✅ Executes the same quality checks as pre-commit hooks
-- **Docker Build**: ✅ Builds and tests the Docker container
-- **Failure Notifications**: ✅ Users are notified when builds fail
+### Technical Projects
+1. **UI Component Library** - React/TypeScript component system
+2. **E-Commerce Platform** - Full-stack web application
+3. **Task Management App** - Real-time collaborative tool
 
-### Docker Requirements
-- **Container Name**: ✅ `Lu_Luke_coding_assignment13`
-- **Working Directory**: ✅ `/Lu_Luke_ui_garden_build_checks`
-- **Port**: ✅ 8018 (localhost:8018 / 127.0.0.1:8018)
-- **Quality Gates**: ✅ Prettier, ESLint, and tests run during build
+### Skills Demonstrated
+- Modern React development with hooks and functional components
+- TypeScript for type safety and better developer experience
+- Styled Components for maintainable CSS-in-JS
+- Docker containerization for consistent deployments
+- Git workflow and version control best practices
 
-## For Teacher Demonstration
+##  Links & Resources
 
-1. **Show Code Quality Tools**:
-   ```bash
-   npm run lint        # ESLint check
-   npm run format:check # Prettier check
-   npm run test:ci     # Run tests
-   ```
+- **GitHub Repository:** [https://github.com/lukelu37217/ui-garden](https://github.com/lukelu37217/ui-garden)
+- **Portfolio Website:** http://localhost:5575 (when running Docker container)
+- **Component Storybook:** Available via `npm run storybook`
 
-2. **Demonstrate Pre-commit Hooks**:
-   - Make a code change with formatting issues
-   - Try to commit → hooks will auto-fix and require re-staging
+## Assignment Submission
 
-3. **Show GitHub Actions**:
-   - Visit: https://github.com/lukelu37217/ui-garden/actions
-   - Show CI/CD pipeline running on commits
+This repository contains:
+- Complete Dockerfile with production build configuration
+- README.md with comprehensive setup instructions
+- Working portfolio website accessible at localhost:5575
+- All required portfolio sections implemented
+- Professional design and responsive layout
+- Evidence of CI/CD pipeline implementation
 
-4. **Docker Deployment**:
-   ```bash
-   docker build -t lu_luke_coding_assignment13 .
-   docker run -d -p 8018:8018 --name lu_luke_coding_assignment13 lu_luke_coding_assignment13
-   ```
-   - Visit: http://localhost:8018
+## Developer Information
 
-## Deployment
-
-The container serves a production build from the Create React App build folder using Nginx on port 8018.
+**Luke Lu**  
+Full Stack Developer & UI/UX Enthusiast  
+[GitHub](https://github.com/lukelu37217) | [Portfolio](http://localhost:5575)
 
 ---
+
+*This portfolio demonstrates modern web development practices and serves as Assignment 14 for the coding course, building upon the component library foundation from Assignment 13.*
 
 
