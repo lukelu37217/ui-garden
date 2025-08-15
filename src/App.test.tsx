@@ -10,8 +10,8 @@ test('renders portfolio title', () => {
 
 test('renders main navigation', () => {
   render(<App />);
-  const homeButton = screen.getByText(/Home/i);
-  const portfolioButton = screen.getByText(/Portfolio/i);
+  const homeButton = screen.getByRole('button', { name: /home/i });
+  const portfolioButton = screen.getByRole('button', { name: /^portfolio$/i });
   expect(homeButton).toBeInTheDocument();
   expect(portfolioButton).toBeInTheDocument();
 });
@@ -19,7 +19,9 @@ test('renders main navigation', () => {
 test('renders main content sections', () => {
   render(<App />);
   const workSection = screen.getByText(/My Work & Projects/i);
-  const skillsSection = screen.getByText(/Technical Skills/i);
+  const skillsSection = screen.getByRole('heading', {
+    name: /technical skills/i,
+  });
   expect(workSection).toBeInTheDocument();
   expect(skillsSection).toBeInTheDocument();
 });
