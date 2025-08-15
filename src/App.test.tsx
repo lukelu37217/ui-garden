@@ -20,6 +20,7 @@ test('renders main content sections', () => {
   render(<App />);
   const workSection = screen.getByText(/My Work & Projects/i);
   const skillsSection = screen.getByRole('heading', {
+    level: 2,
     name: /technical skills/i,
   });
   expect(workSection).toBeInTheDocument();
