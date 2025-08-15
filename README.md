@@ -2,18 +2,26 @@
 
 **Student:** Luke Lu  
 **Course:** Coding Assignment 14 - Building a Portfolio Website  
+**GitHub Repository:** https://github.com/lukelu37217/ui-garden  
 **Container Name:** lu_luke_coding_assignment14  
 **Port:** 5575 (localhost:5575)
 
-## Quick Start Instructions
+## 🚀 Quick Start Instructions
 
 ### Prerequisites
 - Docker installed on your system
 - Port 5575 available
+- Git (for cloning repository)
 
 ### Running the Application
 
-1. **Build and Run with Docker:**
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/lukelu37217/ui-garden.git
+   cd ui-garden
+   ```
+
+2. **Build and Run with Docker:**
    ```bash
    # Stop any existing container
    docker rm -f lu_luke_coding_assignment14
@@ -25,16 +33,28 @@
    docker run -d -p 5575:5575 --name lu_luke_coding_assignment14 lu_luke_coding_assignment14
    ```
 
-2. **Access the Portfolio:**
+3. **Access the Portfolio:**
    - Open your browser and navigate to: `http://localhost:5575`
    - Or: `http://127.0.0.1:5575`
 
-3. **Stop the Application:**
+4. **Stop the Application:**
    ```bash
    docker stop lu_luke_coding_assignment14
    ```
 
-## Assignment Requirements Fulfilled
+## 📋 Assignment Requirements Fulfilled
+
+### ✅ Complete Submission Requirements
+- **Dockerfile** ✅ - Multi-stage production build container
+- **README.md** ✅ - This comprehensive setup guide
+- **GitHub Repository** ✅ - Working link: https://github.com/lukelu37217/ui-garden
+
+### ✅ CI/CD Pipeline Evidence (Level 4 - 5 Points)
+- **Prettier Implementation** ✅ - Automated code formatting with pre-commit hooks
+- **ESLint Implementation** ✅ - Code quality enforcement in GitHub Actions
+- **Testing Pipeline** ✅ - Jest test suite with coverage reporting
+- **GitHub Actions** ✅ - Complete CI/CD workflow (`.github/workflows/ci-cd-pipeline.yml`)
+- **Pipeline Documentation** ✅ - See `PIPELINE_EVIDENCE.md`
 
 ### Portfolio Sections Implemented
 
