@@ -2,36 +2,30 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders UI Component Library title', () => {
+test('renders portfolio title', () => {
   render(<App />);
-  const titleElement = screen.getByText(
-    /UI Component Library - Assignment 13/i
-  );
+  const titleElement = screen.getByText(/Luke Lu - Full Stack Developer/i);
   expect(titleElement).toBeInTheDocument();
 });
 
-test('renders author name', () => {
+test('renders main navigation', () => {
   render(<App />);
-  const authorElement = screen.getByText(
-    /Lu Luke - UI Component Library with CI\/CD Pipeline/i
-  );
-  expect(authorElement).toBeInTheDocument();
+  const homeButton = screen.getByText(/Home/i);
+  const portfolioButton = screen.getByText(/Portfolio/i);
+  expect(homeButton).toBeInTheDocument();
+  expect(portfolioButton).toBeInTheDocument();
 });
 
-test('renders button components', () => {
+test('renders main content sections', () => {
   render(<App />);
-  const primaryButton = screen.getByText(/Primary Button/i);
-  const disabledButton = screen.getByText(/Disabled Button/i);
-  expect(primaryButton).toBeInTheDocument();
-  expect(disabledButton).toBeInTheDocument();
+  const workSection = screen.getByText(/My Work & Projects/i);
+  const skillsSection = screen.getByText(/Technical Skills/i);
+  expect(workSection).toBeInTheDocument();
+  expect(skillsSection).toBeInTheDocument();
 });
 
-test('renders feature checkmarks', () => {
+test('renders portfolio call to action', () => {
   render(<App />);
-  const qualityText = screen.getByText(
-    /Code Quality: Prettier \+ ESLint \+ Tests/i
-  );
-  const hooksText = screen.getByText(/Pre-commit Hooks: Husky \+ Lint-staged/i);
-  expect(qualityText).toBeInTheDocument();
-  expect(hooksText).toBeInTheDocument();
+  const ctaButton = screen.getByText(/View My Portfolio/i);
+  expect(ctaButton).toBeInTheDocument();
 });
