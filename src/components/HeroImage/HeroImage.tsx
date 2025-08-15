@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { HeroImageProps } from './HeroImage.types';
 
-const HeroContainer = styled.div<{ backgroundImage: string }>`
+const HeroContainer = styled.div.withConfig({
+  shouldForwardProp: prop => prop !== 'backgroundImage',
+})<{ backgroundImage: string }>`
   background-image: url(${props => props.backgroundImage});
   background-size: cover;
   background-position: center;
