@@ -18,8 +18,11 @@ test('renders main navigation', () => {
 
 test('renders main content sections', () => {
   render(<App />);
-  const workSection = screen.getByText(/Featured Work & Projects/i);
-  const skillsSection = screen.getByText(/Technical Skills & Expertise/i);
+  const workSection = screen.getByText(/My Work & Projects/i);
+  const skillsSection = screen.getByRole('heading', {
+    name: /Technical Skills/i,
+    level: 2,
+  });
   expect(workSection).toBeInTheDocument();
   expect(skillsSection).toBeInTheDocument();
 });
