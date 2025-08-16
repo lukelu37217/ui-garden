@@ -31,7 +31,7 @@ function App() {
         <HeroImage
           backgroundImage="/images/hero-background.jpg"
           title="Luke Lu - Full Stack Developer"
-          subtitle="Analytical and adaptable web development student from Winnipeg, building modern web applications with React, TypeScript, and cutting-edge technologies."
+          subtitle="Analytical and adaptable web development student from Winnipeg"
           buttonText="View My Portfolio"
           onButtonClick={() => setCurrentPage('portfolio')}
         />
@@ -42,20 +42,13 @@ function App() {
         {/* Work Section */}
         <section id="work" className="work-section">
           <div className="container">
-            <Text content="Featured Work & Projects" size="large" />
+            <Text content="My Work & Projects" size="large" />
             <div className="projects-grid">
               <Card
                 image="/images/ui-component-library.jpg"
-                title="UI Component Library & Portfolio"
-                description="Comprehensive React component library with TypeScript, automated testing, Storybook documentation, and professional portfolio website. Features Docker containerization and CI/CD pipeline."
+                title="Recent Projects"
+                description="View my latest work including UI component libraries, e-commerce platforms, and task management systems built with modern web technologies."
                 buttonText="View Projects"
-                onButtonClick={() => setCurrentPage('portfolio')}
-              />
-              <Card
-                image="/images/ecommerce-project.jpg"
-                title="E-Commerce & Web Applications"
-                description="Full-stack web applications including e-commerce platforms, task management systems, and modern responsive websites built with React, Node.js, and database integration."
-                buttonText="Explore Work"
                 onButtonClick={() => setCurrentPage('portfolio')}
               />
             </div>
@@ -65,20 +58,14 @@ function App() {
         {/* Skills Section */}
         <section className="skills-section">
           <div className="container">
-            <Text content="Technical Skills & Expertise" size="large" />
+            <Text content="Technical Skills" size="large" />
             <div className="skills-grid">
+              {/* Revert to original single-card style for the Home page */}
               <Card
                 image="/images/frontend-development.jpg"
-                title="Frontend Development"
-                description="React 19.1.0 with TypeScript, modern JavaScript ES6+, HTML5, CSS3, Styled Components, responsive design principles, and component-based architecture."
+                title="Technical Skills"
+                description="Frontend: React, TypeScript, JavaScript, HTML5, CSS3. Backend: Node.js & Express. Databases: MongoDB, PostgreSQL. Tools: Git, Docker, VS Code."
                 buttonText="View Skills"
-                onButtonClick={() => setCurrentPage('portfolio')}
-              />
-              <Card
-                image="/images/backend-development.jpg"
-                title="Backend & DevOps"
-                description="Node.js & Express, PHP & Laravel, database design, RESTful APIs, Docker containerization, CI/CD pipelines, and automated testing frameworks."
-                buttonText="Explore Tools"
                 onButtonClick={() => setCurrentPage('portfolio')}
               />
             </div>
@@ -88,20 +75,13 @@ function App() {
         {/* Resources Section */}
         <section className="resources-section">
           <div className="container">
-            <Text content="Learning Resources & Documentation" size="large" />
+            <Text content="Learning Resources" size="large" />
             <div className="resources-grid">
               <Card
                 image="/images/mdn-docs.jpg"
-                title="Web Development Resources"
-                description="Curated collection of essential development resources including MDN Web Docs, React documentation, TypeScript handbook, GitHub guides, and modern web development best practices."
+                title="Learning Resources"
+                description="Including MDN Web Docs, React documentation, TypeScript handbook, GitHub project management and other essential development resources."
                 buttonText="View Resources"
-                onButtonClick={() => setCurrentPage('portfolio')}
-              />
-              <Card
-                image="/images/github-platform.jpg"
-                title="Project Management & Collaboration"
-                description="GitHub for version control, project management, issue tracking, pull request workflows, and collaborative development practices with modern DevOps methodologies."
-                buttonText="See Projects"
                 onButtonClick={() => setCurrentPage('portfolio')}
               />
             </div>
@@ -115,16 +95,9 @@ function App() {
             <div className="setup-grid">
               <Card
                 image="/images/vscode-setup.jpg"
-                title="Professional Development Setup"
-                description="Optimized VS Code environment with React/TypeScript extensions, Prettier formatting, ESLint linting, GitLens, and custom terminal configuration for maximum productivity."
+                title="Development Setup"
+                description="Using VS Code as primary development environment with React/Redux plugins, Prettier, ESLint and other productivity extensions."
                 buttonText="View Setup"
-                onButtonClick={() => setCurrentPage('portfolio')}
-              />
-              <Card
-                image="/images/terminal-setup.jpg"
-                title="Tools & Workflow Optimization"
-                description="PowerShell and Git Bash terminals, Docker CLI, Node.js environment, custom aliases, and automated workflow scripts for efficient development processes."
-                buttonText="See Tools"
                 onButtonClick={() => setCurrentPage('portfolio')}
               />
             </div>
