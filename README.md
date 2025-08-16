@@ -3,6 +3,7 @@
 **Student:** Luke Lu  
 **Course:** Coding Assignment 14 - Building a Portfolio Website  
 **GitHub Repository:** https://github.com/lukelu37217/ui-garden  
+**Status:** ✅ All requirements completed, CI/CD pipeline fully functional  
 **Container Name:** lu_luke_coding_assignment14  
 **Port:** 5575 (localhost:5575)
 
